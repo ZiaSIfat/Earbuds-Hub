@@ -1,12 +1,11 @@
 import React from 'react';
-
+import './List.css'
 const List = (props) => {
     const { list } = props;
     return (
-        <div>
-            <h1>Orders</h1>
-
-            <p>Name: {list.name}</p>
+        <div className='listed-items'>
+            <h2>Selected Items</h2>
+            <h4>Name: {list.map(item => item.name)}</h4>
         </div>
     );
 };
