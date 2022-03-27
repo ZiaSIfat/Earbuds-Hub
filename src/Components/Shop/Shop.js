@@ -36,6 +36,7 @@ const Shop = () => {
             <div>
                 <List
                     list={list}
+                    resetBtn={resetBtn}
                 ></List>
             </div>
         </div>

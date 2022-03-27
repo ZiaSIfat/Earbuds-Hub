@@ -11,7 +11,7 @@ const List = (props) => {
             }
             <button className='list-btn'>Choose One</button>
             <br /><br />
-            <button className='list-btn'>Reset</button>
+            <button onClick={() => props.resetBtn(props.product)} className='list-btn'>Reset</button>
         </div>
     );
 };
