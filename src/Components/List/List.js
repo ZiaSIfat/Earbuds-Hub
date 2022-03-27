@@ -5,7 +5,13 @@ const List = (props) => {
     return (
         <div className='listed-items'>
             <h2>Selected Items</h2>
-            <h4>Name: {list.map(item => item.name)}</h4>
+            {
+                list.map(item => <h4>Name: {item.name}</h4>)
+
+            }
+            <button className='list-btn'>Choose One</button>
+            <br /><br />
+            <button className='list-btn'>Reset</button>
         </div>
     );
 };

@@ -17,6 +17,9 @@ const Shop = () => {
         const newList = [...list, product]
         setList(newList);
     }
+    const resetBtn = () => {
+        setList([]);
+    }
 
     return (
         <div className='container'>
@@ -31,7 +34,9 @@ const Shop = () => {
                 }
             </div>
             <div>
-                <List list={list}></List>
+                <List
+                    list={list}
+                ></List>
             </div>
         </div>
     );

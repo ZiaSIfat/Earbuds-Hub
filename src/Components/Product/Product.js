@@ -9,8 +9,9 @@ const Product = (props) => {
             <img src={picture} alt="" />
             <div>
                 <h3>Name: {name}</h3>
-                <h5>Price: {price}</h5>
+                <h5>Price: ${price}</h5>
             </div>
+            <br></br>
             <button onClick={() => props.handleBtn(props.product)} className='btn'>
                 <p className='btn-text'>Add To Cart</p>
                 <FontAwesomeIcon icon={faShoppingCart}></FontAwesomeIcon>

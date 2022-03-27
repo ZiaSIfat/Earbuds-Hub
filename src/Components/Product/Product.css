@@ -2,24 +2,29 @@
     border: 2px solid gray;
     border-radius: 20px;
     margin: 10px;
+    position: relative;
+   background-color: lightskyblue;
+   color: rgb(240, 240, 240);
 }
 .card img{
     width: 200px;
     height: 200px;
+   
 }
 .btn{
     width: 100%;
     border: none;
     border-radius: 0px 0px 20px 20px;
-    padding: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
-   
+    position: absolute;
+    bottom: 0;
+    background-color: lightskyblue;
 }
 .btn .btn-text{
     margin-right: 5px;
 }
 .btn:hover{
-    background-color: gold;
+    background-color: rgb(59, 174, 245);
 }
