@@ -6,7 +6,6 @@ import './Shop.css'
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [list, setList] = useState([]);
-    console.log(list)
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -21,6 +20,12 @@ const Shop = () => {
         setList([]);
     }
 
+    const randomItems = () => {
+        if (list.length > 0) {
+            const random = Math.floor(Math.random() * list.length);
+            setList([list[random]])
+        }
+    }
 
     return (
         <div className='container'>
@@ -39,7 +44,7 @@ const Shop = () => {
                     key={list.id}
                     list={list}
                     resetBtn={resetBtn}
-
+                    randomItems={randomItems}
                 ></List>
             </div>
         </div>
