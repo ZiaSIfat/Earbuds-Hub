@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import List from '../List/List';
 import Product from '../Product/Product';
+import QA from '../QA/QA';
 import './Shop.css'
 
 const Shop = () => {
@@ -39,6 +40,7 @@ const Shop = () => {
                     ></Product>)
                 }
             </div>
+
             <div>
                 <List
                     key={list.id}
@@ -46,6 +48,9 @@ const Shop = () => {
                     resetBtn={resetBtn}
                     randomItems={randomItems}
                 ></List>
+            </div>
+            <div>
+                <QA></QA>
             </div>
         </div>
     );
