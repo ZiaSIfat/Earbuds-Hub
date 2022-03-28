@@ -6,6 +6,7 @@ import './Shop.css'
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [list, setList] = useState([]);
+    console.log(list)
     useEffect(() => {
         fetch('data.json')
             .then(res => res.json())
@@ -13,13 +14,13 @@ const Shop = () => {
     }, [])
 
     const handleBtn = (product) => {
-        console.log(product)
         const newList = [...list, product]
         setList(newList);
     }
     const resetBtn = () => {
         setList([]);
     }
+
 
     return (
         <div className='container'>
@@ -35,8 +36,10 @@ const Shop = () => {
             </div>
             <div>
                 <List
+                    key={list.id}
                     list={list}
                     resetBtn={resetBtn}
+
                 ></List>
             </div>
         </div>
